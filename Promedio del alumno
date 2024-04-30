@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int A,B,C;
+    int suma=0;
+    int promedio=0;
+    cout << "Notas de Christian Rios en literatura " << endl;
+    cout<<"Primer trimestre: ";
+    cin>>A;
+    cout<<"Segundo trimestre: ";
+    cin>>B;
+    cout<<"Tercer trimestre: ";
+    cin>>C;
+    
+    suma = A + B + C;
+    promedio = suma / 3 ;
+    
+    cout<<"Christian Rios su promedio es: " << promedio << endl;
+    
+    return 0;
