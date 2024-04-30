@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int lado;     
+    int perímetro;
+    cout << "Ingrese el valor del lado";
+    cin >> lado;
+    perímetro = lado * 4;
+    cout << "El perímetro del cuadrado es " << perímetro << endl;
+    
+    return 0;
+}
