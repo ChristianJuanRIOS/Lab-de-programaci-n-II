@@ -1,0 +1,20 @@
+#include <iostream>
+#include <bitset>
+using namespace std;
+
+int main() {
+    int numero;
+
+    cout << "Ingrese un numero entre 1 y 100: ";
+    cin >> numero;
+
+    if (numero < 1 || numero > 100) {
+        cout << "El numero ingresado esta fuera del rango valido." << endl;
+        return 1;
+    }
+
+    bitset<7> binario(numero);
+    cout << "El equivalente en binario de " << numero << " es: " << binario << endl;
+
+    return 0;
+}
