@@ -1,0 +1,15 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+ float calcularValorAbsoluto(double num) {
+    return abs(num);
+}
+
+int main() {
+    double num;
+    cout << "Ingrese un númerO: ";
+    cin >> num;
+    cout << "Valor absoluto: " << calcularValorAbsoluto(num) << endl;
+    return 0;
+}
