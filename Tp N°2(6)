@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int edad, sumaManana = 0, sumaTarde = 0, sumaNoche = 0;
+    float promedioManana, promedioTarde, promedioNoche;
+    
+    cout << "Ingresar las edades de los 5 estudiantes del turno mañana:" << endl;
+    for (int i = 0; i < 5; i++) {
+        cout << "Edad del estudiante " << i + 1 << ": ";
+        cin >> edad;
+        sumaManana += edad;
+    }
+
+    cout << "Ingresar las edades de los 6 estudiantes del turno tarde:" << endl;
+    for (int i = 0; i < 6; i++) {
+        cout << "Edad del estudiante " << i + 1 << ": ";
+        cin >> edad;
+        sumaTarde += edad;
+    }
+
+    cout << "Ingresar las edades de los 11 estudiantes del turno noche:" << endl;
+    for (int i = 0; i < 11; i++) {
+        cout << "Edad del estudiante " << i + 1 << ": ";
+        cin >> edad;
+        sumaNoche += edad;
+    }
+
+    promedioManana = static_cast<float>(sumaManana) / 5;
+    promedioTarde = static_cast<float>(sumaTarde) / 6;
+    promedioNoche = static_cast<float>(sumaNoche) / 11;
+
+    cout << "Promedio de edades del turno mañana: " << promedioManana << endl;
+    cout << "Promedio de edades del turno tarde: " << promedioTarde << endl;
+    cout << "Promedio de edades del turno noche: " << promedioNoche << endl;
+
+    if (promedioManana > promedioTarde && promedioManana > promedioNoche) {
+        cout << "El turno mañana tiene el promedio de edades mayor." << endl;
+    } else if (promedioTarde > promedioManana && promedioTarde > promedioNoche) {
+        cout << "El turno tarde tiene el promedio de edades mayor." << endl;
+    } else {
+        cout << "El turno noche tiene el promedio de edades mayor." << endl;
+    }
+
+    return 0;
+}
