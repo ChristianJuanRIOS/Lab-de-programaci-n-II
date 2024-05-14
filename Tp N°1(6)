@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    const float precioProducto = 10.0;
+    int cantidadProductos;
+    float totalPagar = 0.0;
+
+    cout << "Bienvenido a la caja registradora." << endl;
+
+    while (true) {
+        cout << "Ingrese la cantidad de productos vendidos (0 para terminar): ";
+        cin >> cantidadProductos;
+
+        if (cantidadProductos == 0) {
+            break;
+        }
+
+        totalPagar += cantidadProductos * precioProducto;
+    }
+
+    cout << "El total a pagar es: $" << totalPagar << endl;
+
+    return 0;
+}
