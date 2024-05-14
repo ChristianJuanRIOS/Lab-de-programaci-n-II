@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    const float precioEntrada = 10;
+    int cantidadEntradas;
+
+    cout << "Ingrese la cantidad de entradas a comprar (máximo 4): ";
+    cin >> cantidadEntradas;
+
+    float totalPagar;
+    switch (cantidadEntradas) {
+        case 1:
+            totalPagar = precioEntrada;
+            break;
+        case 2:
+            totalPagar = 2 * precioEntrada * 0.9;
+            break;
+        case 3:
+            totalPagar = 3 * precioEntrada * 0.85;
+            break;
+        case 4:
+            totalPagar = 4 * precioEntrada * 0.8;
+            break;
+        default:
+            cout << "Error: Solo se permiten comprar hasta cuatro entradas." << endl;
+            return 1;
+    }
+
+    cout << "El total a pagar es: $" << totalPagar << endl;
+
+    return 0;
+}
