@@ -8,7 +8,7 @@ using namespace std;
 
 int main() {
     double num;
-    cout << "Ingrese un númerO: ";
+    cout << "Ingrese un número: ";
     cin >> num;
     cout << "Valor absoluto: " << calcularValorAbsoluto(num) << endl;
     return 0;
