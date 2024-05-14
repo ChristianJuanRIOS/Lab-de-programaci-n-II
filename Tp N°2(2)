@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int cant1 = 0, cant2 = 0, cant3 = 0;
+    float peso, suma;
+
+    cout << "Ingrese el peso: ";
+    cin >> peso;
+
+    if (peso > 10.2) {
+        cant1++;
+    } else if (peso >= 9.2) {
+        cant2++;
+    } else if (peso > 0) {
+        cant3++;
+    }
+
+    suma = cant1 + cant2 + cant3;
+
+    cout << "Cantidad 1: " << cant1 << endl;
+    cout << "Cantidad 2: " << cant2 << endl;
+    cout << "Cantidad 3: " << cant3 << endl;
+    cout << "Suma total: " << suma << endl;
+
+    return 0;
+}
