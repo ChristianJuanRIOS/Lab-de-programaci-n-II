@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int totalPreguntas, preguntasCorrectas;
+
+    cout << "Ingrese la cantidad total de preguntas: ";
+    cin >> totalPreguntas;
+
+    cout << "Ingrese la cantidad de preguntas contestadas correctamente: ";
+    cin >> preguntasCorrectas;
+
+    float porcentaje = (static_cast<float>(preguntasCorrectas) / totalPreguntas) * 100;
+
+    cout << "Nivel de la evaluación: ";
+    if (porcentaje >= 90)
+        cout << "Nivel máximo" << endl;
+    else if (porcentaje >= 75)
+        cout << "Nivel medio" << endl;
+    else if (porcentaje >= 50)
+        cout << "Nivel regular" << endl;
+    else
+        cout << "Fuera de nivel" << endl;
+
+    return 0;
+}
