@@ -1,0 +1,24 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+void mostrarVectorInverso(const vector<int> & vec) {
+    for (auto it = vec.rbegin(); it != vec.rend(); ++it) {
+        cout << *it << " ";
+    }
+    cout << endl;
+}
+
+int main() {
+    vector<int> vec(10);
+    cout << "Ingrese 10 números enteros: ";
+    for (int & num : vec) {
+        cin >> num;
+    }
+
+    cout << "Vector en orden inverso: ";
+    mostrarVectorInverso(vec);
+
+    return 0;
+}
