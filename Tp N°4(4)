@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+#include <cctype>
+
+using namespace std;
+
+int contarLetras(const string& cadena) {
+    int contador = 0;
+    for (char c : cadena) {
+        if (isalpha(c)) {
+            contador++;
+        }
+    }
+    return contador;
+}
+
+int main() {
+    string cadena;
+    cout << "Ingrese una cadena: ";
+    getline(cin, cadena);
+
+    cout << "La cadena contiene " << contarLetras(cadena) << " letras." << endl;
+
+    return 0;
+}
