@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int contarCaracter(const string & cadena, char caracter) {
+    int contador = 0;
+    for (char c : cadena) {
+        if (c == caracter) {
+            contador++;
+        }
+    }
+    return contador;
+}
+
+int main() {
+    string cadena;
+    char caracter;
+    cout << "Ingrese una cadena: ";
+    getline(cin, cadena);
+    cout << "Ingrese el carácter a contar: ";
+    cin >> caracter;
+
+    cout << "El carácter '" << caracter << "' aparece " << contarCaracter(cadena, caracter) << " veces." << endl;
+
+    return 0;
+}
