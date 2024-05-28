@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int contarLetras(const string& cadena) {
+int contarLetras(const string & cadena) {
     int contador = 0;
     for (char c : cadena) {
         if (isalpha(c)) {
