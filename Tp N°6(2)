@@ -1,51 +1,47 @@
 #include <iostream>
 using namespace std;
 
-class Persona {
+class Triangulo {
 private:
-    char nombre[40];
-    int edad;
+    float lado1, lado2, lado3;
 public:
     void inicializar();
-    void imprimir();
-    void esMayorEdad();
+    void imprimirLadoMayor();
+    void esEquilatero();
 };
 
-void Persona::inicializar() {
-    cout << "Ingrese nombre: ";
-    cin.getline(nombre, 40);
-    cout << "Ingrese edad: ";
-    cin >> edad;
-    cin.ignore();
+void Triangulo::inicializar() {
+    cout << "Ingrese el valor del lado 1: ";
+    cin >> lado1;
+    cout << "Ingrese el valor del lado 2: ";
+    cin >> lado2;
+    cout << "Ingrese el valor del lado 3: ";
+    cin >> lado3;
 }
 
-void Persona::imprimir() {
-    cout << "Nombre: " << nombre << "\n";
-    cout << "Edad: " << edad << "\n";
+void Triangulo::imprimirLadoMayor() {
+    float mayor = lado1;
+    if (lado2 > mayor) {
+        mayor = lado2;
+    }
+    if (lado3 > mayor) {
+        mayor = lado3;
+    }
+    cout << "El lado mayor es: " << mayor << endl;
 }
 
-void Persona::esMayorEdad() {
-    if (edad >= 18) {
-        cout << "Es mayor de edad.\n";
+void Triangulo::esEquilatero() {
+    if (lado1 == lado2 && lado2 == lado3) {
+        cout << "El triángulo es equilátero." << endl;
     } else {
-        cout << "No es mayor de edad.\n";
+        cout << "El triángulo no es equilátero." << endl;
     }
 }
 
 int main() {
-    const int numPersonas = 5;
-    Persona personas[numPersonas];
-
-    for(int i = 0; i < numPersonas; i++) {
-        cout << "Datos de la persona " << i+1 << ":\n";
-        personas[i].inicializar();
-    }
-
-    for(int i = 0; i < numPersonas; i++) {
-        cout << "\nDatos de la persona " << i+1 << ":\n";
-        personas[i].imprimir();
-        personas[i].esMayorEdad();
-    }
-
+    Triangulo triangulo;
+    triangulo.inicializar();
+    triangulo.imprimirLadoMayor();
+    triangulo.esEquilatero();
     return 0;
 }
