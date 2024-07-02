@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+
+class Operaciones {
+private:
+    int valor1, valor2;
+public:
+    void cargarValores();
+    void sumar();
+    void restar();
+    void multiplicar();
+    void dividir();
+};
+
+void Operaciones::cargarValores() {
+    cout << "Ingrese el primer valor: ";
+    cin >> valor1;
+    cout << "Ingrese el segundo valor: ";
+    cin >> valor2;
+}
+
+void Operaciones::sumar() {
+    int suma = valor1 + valor2;
+    cout << "La suma de " << valor1 << " y " << valor2 << " es: " << suma << endl;
+}
+
+void Operaciones::restar() {
+    int resta = valor1 - valor2;
+    cout << "La resta de " << valor1 << " y " << valor2 << " es: " << resta << endl;
+}
+
+void Operaciones::multiplicar() {
+    int multiplicacion = valor1 * valor2;
+    cout << "La multiplicación de " << valor1 << " y " << valor2 << " es: " << multiplicacion << endl;
+}
+
+void Operaciones::dividir() {
+    if (valor2 != 0) {
+        float division = static_cast<float>(valor1) / valor2;
+        cout << "La división de " << valor1 << " y " << valor2 << " es: " << division << endl;
+    } else {
+        cout << "Error: División por cero no es posible." << endl;
+    }
+}
+
+int main() {
+    Operaciones operaciones;
+    operaciones.cargarValores();
+    operaciones.sumar();
+    operaciones.restar();
+    operaciones.multiplicar();
+    operaciones.dividir();
+    return 0;
+}
