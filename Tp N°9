@@ -1,0 +1,46 @@
+1)
+A) Encapsulamiento: Es un principio de la programación orientada a objetos que restringe 
+el acceso directo a algunos de los componentes de un objeto. Esto se hace mediante el
+uso de modificadores de acceso para proteger datos, evitando la modificación o el uso 
+inapropiado de los mismos. Solo se permite la manipulación de estos datos a través de 
+métodos específicos.
+
+B) Niveles de acceso a miembros de la clase:
+Público (public): Los miembros son accesibles desde cualquier parte del programa.
+Privado (private): Los miembros solo son accesibles desde la propia clase.
+Protegido (protected): Los miembros son accesibles desde la clase y las clases derivadas.
+
+2)
+A) Getters y Setters: Son métodos de una clase que permiten acceder y modificar los valores
+de los atributos privados de la clase.
+
+B) Propósito principal: Proteger los datos al controlar cómo se accede y modifica un atributo.
+
+C) Cuándo usarlos: Es conveniente utilizarlos cuando los atributos de la clase son privados y
+se necesita un control sobre la lectura o escritura de estos valores, por ejemplo, para validar 
+los datos antes de asignarlos.
+
+3)
+A) La diferencia es que un constructor es un método especial que se ejecuta automáticamente al crear
+una instancia de una clase, generalmente utilizado para inicializar atributos y el destructor es un
+método especial que se ejecuta cuando un objeto es destruido, normalmente usado para liberar recursos.
+
+B) El constructor se ejecuta al inicio de la vida del objeto y el destructor al final de su vida.
+
+4) Comparación entre Constructores y Destructores
+
+| Característica       | Constructor                                                | Destructor                                    |
+|----------------------|------------------------------------------------------------|-----------------------------------------------|
+| Nombre               | Igual al nombre de la clase                                | Igual al nombre de la clase precedido por `~` |
+| Momento de ejecución | Se ejecuta al crear un objeto                              | Se ejecuta al destruir el objeto              |
+| Retorno de datos     | No puede retornar datos                                    | No puede retornar datos                       |
+| Número de ejecuciones| Puede ejecutarse varias veces (si se crean varios objetos) | Solo se ejecuta una vez por objeto            |
+| Parámetros           | Puede aceptar parámetros para inicialización               | No acepta parámetros                          |
+| Obligatorio          | No es obligatorio                                          | No es obligatorio                             |
+
+5) Comparación: Definir funciones dentro vs fuera de la clase
+
+| Opción               | Ventajas                                           | Desventajas                                           |
+|----------------------|----------------------------------------------------|-------------------------------------------------------|
+| Dentro de la clase   | Optimización al ser `inline`, código sencillo.     | Puede complicar la lectura si hay muchas funciones.   |
+| Fuera de la clase    | Mantiene la clase limpia y legible.                | No es `inline` automáticamente.                       |
