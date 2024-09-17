@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Empleado {
+private:
+    string nombre;
+    float sueldo;
+
+public:
+    Empleado() {
+        cout << "Ingrese el nombre del empleado: ";
+        cin >> nombre;
+        cout << "Ingrese el sueldo del empleado: ";
+        cin >> sueldo;
+    }
+
+    void imprimirDatos() {
+        cout << "Nombre: " << nombre << ", Sueldo: " << sueldo << endl;
+    }
+
+    void debePagarImpuestos() {
+        if (sueldo > 3000) {
+            cout << nombre << " debe pagar impuestos." << endl;
+        } else {
+            cout << nombre << " no debe pagar impuestos." << endl;
+        }
+    }
+};
+
+int main() {
+    Empleado empleado;
+    empleado.imprimirDatos();
+    empleado.debePagarImpuestos();
+    return 0;
+}
