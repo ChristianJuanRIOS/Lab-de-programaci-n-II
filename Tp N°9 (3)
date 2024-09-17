@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+class Operaciones {
+private:
+    int num1, num2;
+
+public:
+    Operaciones(int a, int b) {
+        num1 = a;
+        num2 = b;
+    }
+
+    void sumar() {
+        cout << "Suma: " << num1 + num2 << endl;
+    }
+
+    void restar() {
+        cout << "Resta: " << num1 - num2 << endl;
+    }
+
+    void multiplicar() {
+        cout << "Multiplicación: " << num1 * num2 << endl;
+    }
+
+    void dividir() {
+        if (num2 != 0) {
+            cout << "División: " << num1 / num2 << endl;
+        } else {
+            cout << "Error: División por cero." << endl;
+        }
+    }
+};
+
+int main() {
+    int a, b;
+    cout << "Ingrese dos números: ";
+    cin >> a >> b;
+    Operaciones op(a, b);
+    op.sumar();
+    op.restar();
+    op.multiplicar();
+    op.dividir();
+    return 0;
+}
