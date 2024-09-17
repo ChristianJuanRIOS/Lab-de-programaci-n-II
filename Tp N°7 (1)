@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+class CEntero {
+public:
+    void cargarValor() {
+        int valor;
+        cout << "Ingrese un valor entero: ";
+        cin >> valor;
+        mostrarValores(valor);
+    }
+
+private:
+    void mostrarValores(int valor) {
+        for (int i = 1; i <= valor; i++) {
+            cout << i << " ";
+        }
+        cout << endl;
+    }
+};
+
+int main() {
+    CEntero entero;
+    entero.cargarValor();
+    return 0;
+}
