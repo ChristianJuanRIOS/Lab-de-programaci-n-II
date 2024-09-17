@@ -1,0 +1,11 @@
+Diferencia entre un vector tradicional y un vector de clase en C++
+
+| Característica       | Vector Tradicional                                      | Vector de Clase                                        |
+|----------------------|---------------------------------------------------------|--------------------------------------------------------|
+| Contenido            | Almacena datos primitivos (int, float, etc.).           | Almacena objetos de una clase definida por el usuario. |
+| Métodos              | Métodos estándar para manipulación de datos primitivos. | Además de métodos estándar, los objetos de clase pueden|
+                                                                                 | tener métodos personalizados.                          |
+| Funcionalidad        | Se usa principalmente para manejo básico de datos.      | Se usa para manejar colecciones de objetos complejos.  |
+| Comportamiento       | Almacena datos homogéneos de tipos básicos.             | Permite almacenar objetos con diferentes               |
+                                                                                 | comportamientos y métodos.                             |
+| Ejemplo              | `vector<int> numeros;`                                  | `vector<Alumno> alumnos;`                              |
