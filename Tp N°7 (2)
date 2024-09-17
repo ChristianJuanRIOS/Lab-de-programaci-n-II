@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+class CMayor {
+public:
+    void cargarValores() {
+        int valor1, valor2;
+        cout << "Ingrese dos valores enteros:";
+        cin >> valor1 >> valor2;
+        cout << "El mayor valor es: " << obtenerMayor(valor1, valor2) << endl;
+    }
+
+private:
+    int obtenerMayor(int valor1, int valor2) {
+        return (valor1 > valor2) ? valor1 : valor2;
+    }
+};
+
+int main() {
+    CMayor mayor;
+    mayor.cargarValores();
+    return 0;
+}
