@@ -57,3 +57,56 @@ vec.resize(10);           // Cambia el tamaño a 10 elementos
 
 7) Acceder a un elemento fuera del rango del vector puede causar un comportamiento indefinido. Es recomendable usar el método at() que lanza una excepción si el índice está fuera de rango:
 
+8) La clase vector proporciona una serie de funcionalidades como:
+
+Agregar o eliminar elementos.
+Acceso rápido a elementos por índice.
+Redimensionar automáticamente.
+Métodos como push_back(), pop_back(), size(), capacity(), entre otros.
+
+9)
+| Método.                         | Descripción                                                | Ejemplo                                                      |
+|---------------------------------|------------------------------------------------------------|--------------------------------------------------------------|
+| `size()`                        | Obtiene el tamaño del vector                               | `vec.size();`                                                |
+| `capacity()`                    | Obtiene la capacidad actual del vector                     | `vec.capacity();`                                            |
+| `empty()`                       | Verifica si el vector está vacío                           | `vec.empty();`                                               |
+| `push_back(valor)`              | Añade un elemento al final                                 | `vec.push_back(10);`                                         |
+| `pop_back()`                    | Elimina el último elemento                                 | `vec.pop_back();`                                            |
+| `front()`                       | Devuelve una referencia al primer elemento                 | `vec.front();`                                               |
+| `back()`                        | Devuelve una referencia al último elemento                 | `vec.back();`                                                |
+| `at(posición)`                  | Devuelve una referencia al elemento en la posición         | `vec.at(2);`                                                 |
+| `assign(inicio, fin)`           | Reemplaza el contenido con un rango de elementos           | `vec.assign(otro_vec.begin(), otro_vec.end());`              |
+| `erase(posición)`               | Elimina el elemento en la posición especificada            | `vec.erase(vec.begin() + 2);`                                |
+| `erase(inicio, fin)`            | Elimina un rango de elementos                              | `vec.erase(vec.begin(), vec.begin() + 3);`                   |
+| `insert(posición, valor)`       | Inserta un elemento en la posición especificada            | `vec.insert(vec.begin() + 2, 20);`                           |
+| `insert(posición, inicio, fin)` | Inserta un rango de elementos en una posición              | `vec.insert(vec.begin(), otro_vec.begin(), otro_vec.end());` |
+| `clear()`                       | Elimina todos los elementos del vector                     | `vec.clear();`                                               |
+| `swap(otro_vector)`             | Intercambia el contenido de dos vectores                   | `vec1.swap(vec2);`                                           |
+
+
+10)
+A) Una clase en C++ es una plantilla o un modelo para crear objetos. Define tanto los atributos (datos) como los métodos (funcionalidades) que los objetos creados a partir de esa clase tendrán. Es un pilar fundamental de la Programación Orientada a Objetos (POO), que busca modelar entidades del mundo real en el código.
+Estructura:
+class Persona {
+    private:
+       string nombre;
+        int edad;
+    public:
+        Persona(string _nombre, int _edad) {
+            nombre = _nombre;
+            edad = _edad;
+        }
+        string obtenerNombre() {
+            return nombre;
+        }
+        int obtenerEdad() {
+            return edad;
+        }
+        void mostrarInformacion() {
+
+            cout << "Nombre: " << nombre << ", Edad: " << edad << endl;
+        }
+
+};
+
+B) Un objeto es una instancia de una clase. Mientras que la clase es el molde o plano, un objeto es el resultado tangible creado a partir de ese plano. Los objetos tienen los atributos y comportamientos definidos por la clase y el propósito de un objeto es representar una entidad específica del mundo real o del dominio del problema que se está modelando en el código. Cada objeto tiene su propio estado (valores únicos de sus atributos) y puede ejecutar acciones definidas por sus métodos.
