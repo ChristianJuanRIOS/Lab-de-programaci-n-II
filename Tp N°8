@@ -33,3 +33,27 @@ Tipo de dato string: Es una clase en C++ que proporciona métodos y característ
 | `substr`             | Retorna un substring desde una posición específica                                            | `str.substr(0, 4);` |
 | `swap`               | Intercambia el contenido de dos strings                                                       | `str1.swap(str2);`  |
  
+5) Un vector en C++ es un contenedor dinámico que puede cambiar de tamaño automáticamente cuando se insertan o eliminan elementos. Forma parte de la biblioteca estándar (STL) y ofrece acceso rápido a los elementos por índice.
+
+Características:
+
+•	Almacenamiento dinámico de datos.
+
+•	Acceso rápido a los elementos mediante índices.
+
+•	Se ajusta automáticamente en tamaño cuando se agregan o eliminan elementos.
+
+B) vector<int> vec;            // Vector vacío
+
+vector<int> vec(5);         // Vector con 5 elementos inicializados en 0
+
+vector<int> vec = {1, 2, 3}; // Vector inicializado con valores
+
+6) se puede modificar con el metodo resize()
+
+vector<int> vec(5);  // Vector con 5 elementos
+
+vec.resize(10);           // Cambia el tamaño a 10 elementos
+
+7) Acceder a un elemento fuera del rango del vector puede causar un comportamiento indefinido. Es recomendable usar el método at() que lanza una excepción si el índice está fuera de rango:
+
