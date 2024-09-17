@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+class CNumeros {
+public:
+    void obtenerNumerosPerfectos(int N) {
+        for (int num = 1; num <= N; num++) {
+            if (esPerfecto(num)) {
+                cout << num << endl;
+            }
+        }
+    }
+
+private:
+    bool esPerfecto(int num) {
+        int suma = 0;
+        for (int i = 1; i < num; i++) {
+            if (num % i == 0) {
+                suma += i;
+            }
+        }
+        return suma == num;
+    }
+};
+
+int main() {
+    int N;
+    cout << "Ingrese el valor de N: ";
+    cin >> N;
+    CNumeros numeros;
+    numeros.obtenerNumerosPerfectos(N);
+    return 0;
+}
