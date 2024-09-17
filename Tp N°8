@@ -1,1 +1,7 @@
-En C++
+1)Funciones y procedimientos:
+A) En C++, tanto las funciones como los procedimientosson bloques de código reutilizables, pero la principal diferencia es que una función devuelve un valor, mientras que un procedimiento no.
+B) Una función se utiliza cuando se necesita que el código devuelva un resultado y un procedimiento se utiliza cuando solo se ejecutan acciones sin necesidad de retornar un valor.
+
+2) Los componentes básicos de una función en C++ son:
+1. Tipo de retorno: Especifíca qué tipo de valor devuelve la función (int, float, void, etc.).
+
