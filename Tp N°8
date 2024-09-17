@@ -4,4 +4,32 @@ B) Una función se utiliza cuando se necesita que el código devuelva un resulta
 
 2) Los componentes básicos de una función en C++ son:
 1. Tipo de retorno: Especifíca qué tipo de valor devuelve la función (int, float, void, etc.).
+2.	Nombre de la función: Identificador que permite invocar a la función.
+3.	Parámetros: Opcionales; datos que se pasan a la función para su procesamiento.
+4.	Cuerpo de la función: Código que se ejecuta cuando se llama a la función.
+5.	Valor de retorno (opcional): Si la función tiene un tipo de retorno distinto de void, debe devolver un valor.
 
+3)Arreglo de caracteres: Es un conjunto de caracteres almacenados en posiciones consecutivas de memoria. Es una implementación básica y de bajo nivel de cadenas.
+
+Tipo de dato string: Es una clase en C++ que proporciona métodos y características avanzadas para manejar cadenas de caracteres, como el uso dinámico de memoria y una variedad de funciones para manipular cadenas.
+
+4) 
+| Método/Operador  | Descripción                                                                             | Ejemplo de Uso |
+|----------------------|----------------------------------------------------------------------------------------------|--------------------|
+| `max_size`           | Retorna el tamaño máximo que puede tener el string                                            | `str.max_size();`   |
+| `compare`            | Compara dos strings y retorna un valor para indicar la relación de orden                      | `str.compare("abc");`|
+| `copy`               | Copia el contenido del string en un arreglo de caracteres                                     | `str.copy(arr, 5);`|
+| `c_str`              | Retorna un puntero al arreglo de caracteres que representa el contenido del string            | `str.c_str();`      |
+| `data`               | Similar a `c_str`, retorna el contenido como un puntero a char                                | `str.data();`       |
+| `empty`              | Verifica si el string está vacío                                                             | `str.empty();`      |
+| `erase`              | Elimina caracteres o un rango de caracteres del string                                        | `str.erase(0, 3);`  |
+| `find`               | Busca la primera aparición de un carácter o substring                                         | `str.find("abc");`  |
+| `find_last_of`       | Encuentra la última aparición de un carácter de una lista de caracteres                       | `str.find_last_of("abc");` |
+| `front`              | Retorna una referencia al primer carácter del string                                          | `char c = str.front();` |
+| `insert`             | Inserta caracteres en una posición específica                                                 | `str.insert(0, "Hola ");` |
+| `replace`            | Reemplaza un rango de caracteres con otro string                                              | `str.replace(0, 4, "Adios");` |
+| `reserve`            | Reserva espacio de memoria para el string                                                     | `str.reserve(100);` |
+| `resize`             | Cambia el tamaño del string, agregando o eliminando caracteres                                | `str.resize(5);`    |
+| `substr`             | Retorna un substring desde una posición específica                                            | `str.substr(0, 4);` |
+| `swap`               | Intercambia el contenido de dos strings                                                       | `str1.swap(str2);`  |
+ 
