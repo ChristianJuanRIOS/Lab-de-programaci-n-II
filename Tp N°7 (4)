@@ -1,0 +1,43 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class CEmpleados {
+private:
+    string nombre;
+    float salario;
+    int horas;
+
+public:
+    void cargarDatos() {
+        cout << "Ingrese el nombre del empleado: ";
+        cin >> nombre;
+        cout << "Ingrese el salario actual: ";
+        cin >> salario;
+        cout << "Ingrese las horas de trabajo por día: ";
+        cin >> horas;
+        aumentarSalario();
+    }
+
+    void aumentarSalario() {
+        if (horas == 8) {
+            salario += 250000;
+        } else if (horas == 10) {
+            salario += 300000;
+        } else if (horas >= 12) {
+            salario += 350000;
+        }
+    }
+
+    void mostrarDatos() {
+        cout << "Nombre: " << nombre << endl;
+        cout << "Salario final: " << salario << endl;
+    }
+};
+
+int main() {
+    CEmpleados empleado;
+    empleado.cargarDatos();
+    empleado.mostrarDatos();
+    return 0;
+}
