@@ -1,0 +1,131 @@
+1)  Los modificadores de acceso controlan la visibilidad y accesibilidad de los atributos y métodos de una clase.
+
+  Modificadores disponibles en C++:
+
+public: Los miembros son accesibles desde cualquier parte del programa.
+
+private: Los miembros solo son accesibles dentro de la clase misma.
+
+protected: Los miembros son accesibles desde la propia clase y las clases derivadas.
+
+Estos modificadores se utilizan para aplicar el principio de encapsulamiento, ocultando los detalles internos de una clase y exponiendo solo lo necesario.
+
+2) Un constructor es un método especial que se ejecuta automáticamente cuando se crea un objeto de la clase.
+
+ Propósito: Inicializar los atributos de un objeto.
+
+Definición en C++: El constructor tiene el mismo nombre que la clase y no devuelve ningún valor.
+
+Sintaxis:
+
+     #include <iostream>
+
+using namespace std;
+
+
+
+class Persona {
+
+public:
+
+    string nombre;
+
+    int edad;
+
+
+
+    // Constructor
+
+    Persona(string n, int e) : nombre(n), edad(e) {}
+
+};
+
+
+
+int main() {
+
+    Persona persona1("Juan", 25);
+
+    cout << persona1.nombre << " tiene " << persona1.edad << " años." << endl;
+
+    return 0;
+
+}
+
+3) •  El destructor es un método especial que se ejecuta automáticamente cuando un objeto es destruido.
+
+•  Propósito: Liberar recursos o realizar tareas de limpieza.
+
+•  Definición en C++: Se define con el mismo nombre de la clase, precedido por ~
+
+Sintaxis:
+
+#include <iostream>
+
+Using namespace std;
+
+
+
+Class Persona {
+
+Public:
+    String nombre;
+
+    // Constructor
+    Persona(string n) : nombre(n) {}
+
+    // Destructor
+    ~Persona() {
+
+        Cout << “Destructor llamado para “ << nombre << endl;
+
+    }
+};
+
+Int main() {
+    Persona persona1(“Juan”);
+    Cout << “Hola, “ << persona1.nombre << endl;
+    Return 0;
+}
+
+4) Public: Los miembros pueden ser accedidos desde cualquier parte del programa.
+
+Private: Los miembros solo son accesibles dentro de la clase misma.
+
+Diferencia: Los miembros public son visibles para todos, mientras que los private están ocultos y solo se pueden manipular a través de métodos públicos (como los métodos get y set)
+
+5) La sobrecarga permite definir múltiples métodos con el mismo nombre, pero diferentes parámetros.
+
+Propósito: Facilitar la legibilidad y flexibilidad del código al reutilizar el nombre del método para diferentes acciones
+
+Implementación en C++: Se definen varios métodos con el mismo nombre pero con diferente tipo o cantidad de parámetros
+
+6) Es la interacción entre diferentes clases para resolver un problema.
+
+Propósito: Dividir responsabilidades entre múltiples clases, promoviendo la modularidad.
+
+Implementación: Una clase puede contener objetos de otra clase como atributos, o interactuar con otras clases mediante métodos.
+
+7)Es un mecanismo que permite que una clase (subclase) herede atributos y métodos de otra clase (superclase).
+
+Tipos de herencia:
+
+Simple: Una clase hereda de una sola clase base.
+
+Múltiple: Una clase hereda de varias clases bases.
+
+Ventajas: Reutilización de código y estructura jerárquica.
+
+Desventajas: Puede aumentar la complejidad del código.
+
+Implementación en C++: la herencia se implementa mediante la definición de una clase derivada (o subclase) que hereda las propiedades y comportamientos (atributos y métodos) de una clase base (o superclase). Esto permite reutilizar y extender el código de la clase base en la clase derivada.
+
+8) La colaboración implica la interacción entre clases para resolver tareas, mientras que la herencia es una relación jerárquica donde una clase deriva de otra.
+
+B) 
+
+I) Sí, el programa compilará exitosamente porque el constructor de ClaseDerivada está correctamente definido.
+
+II) El resultado es:
+
+unaVar = 50
