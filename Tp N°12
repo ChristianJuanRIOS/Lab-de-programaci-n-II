@@ -1,6 +1,6 @@
-1)  Los modificadores de acceso controlan la visibilidad y accesibilidad de los atributos y métodos de una clase.
+1) Los modificadores de acceso controlan la visibilidad y accesibilidad de los atributos y métodos de una clase.
 
-  Modificadores disponibles en C++:
+Modificadores disponibles en C++:
 
 public: Los miembros son accesibles desde cualquier parte del programa.
 
@@ -12,27 +12,18 @@ Estos modificadores se utilizan para aplicar el principio de encapsulamiento, oc
 
 2) Un constructor es un método especial que se ejecuta automáticamente cuando se crea un objeto de la clase.
 
- Propósito: Inicializar los atributos de un objeto.
+Propósito: Inicializar los atributos de un objeto.
 
 Definición en C++: El constructor tiene el mismo nombre que la clase y no devuelve ningún valor.
 
 Sintaxis:
-
      #include <iostream>
-
 using namespace std;
 
-
-
 class Persona {
-
 public:
-
     string nombre;
-
     int edad;
-
-
 
     // Constructor
 
@@ -40,34 +31,25 @@ public:
 
 };
 
-
-
 int main() {
-
     Persona persona1("Juan", 25);
-
     cout << persona1.nombre << " tiene " << persona1.edad << " años." << endl;
 
     return 0;
-
 }
 
-3) •  El destructor es un método especial que se ejecuta automáticamente cuando un objeto es destruido.
+3) El destructor es un método especial que se ejecuta automáticamente cuando un objeto es destruido.
 
-•  Propósito: Liberar recursos o realizar tareas de limpieza.
+Propósito: Liberar recursos o realizar tareas de limpieza.
 
-•  Definición en C++: Se define con el mismo nombre de la clase, precedido por ~
+Definición en C++: Se define con el mismo nombre de la clase, precedido por ~
 
 Sintaxis:
 
 #include <iostream>
-
 Using namespace std;
 
-
-
 Class Persona {
-
 Public:
     String nombre;
 
@@ -76,12 +58,9 @@ Public:
 
     // Destructor
     ~Persona() {
-
         Cout << “Destructor llamado para “ << nombre << endl;
-
     }
 };
-
 Int main() {
     Persona persona1(“Juan”);
     Cout << “Hola, “ << persona1.nombre << endl;
@@ -121,8 +100,6 @@ Desventajas: Puede aumentar la complejidad del código.
 Implementación en C++: la herencia se implementa mediante la definición de una clase derivada (o subclase) que hereda las propiedades y comportamientos (atributos y métodos) de una clase base (o superclase). Esto permite reutilizar y extender el código de la clase base en la clase derivada.
 
 8) La colaboración implica la interacción entre clases para resolver tareas, mientras que la herencia es una relación jerárquica donde una clase deriva de otra.
-
-B) 
 
 I) Sí, el programa compilará exitosamente porque el constructor de ClaseDerivada está correctamente definido.
 
