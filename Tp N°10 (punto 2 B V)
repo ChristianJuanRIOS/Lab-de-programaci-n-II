@@ -1,0 +1,54 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+class Empleado {
+private:
+    string nombre;
+    double salario;
+
+public:
+    Empleado(string n, double s) : nombre(n), salario(s) {}
+
+    double getSalario() const { return salario; }
+
+    void mostrar() const {
+        cout << "Nombre: " << nombre << ", Salario: $" << salario << endl;
+    }
+};
+
+bool compararSalario(const Empleado& e1, const Empleado& e2) {
+    return e1.getSalario() > e2.getSalario();
+}
+
+int main() {
+    vector<Empleado> empleados;
+    int numEmpleados;
+
+    cout << "Ingrese el número de empleados: ";
+    cin >> numEmpleados;
+    cin.ignore();
+
+    for (int i = 0; i < numEmpleados; ++i) {
+        string nombre;
+        double salario;
+        
+        cout << "Ingrese el nombre del empleado " << (i + 1) << ": ";
+        getline(cin, nombre);
+        cout << "Ingrese el salario del empleado " << (i + 1) << ": ";
+        cin >> salario;
+        cin.ignore();
+        
+        empleados.push_back(Empleado(nombre, salario));
+    }
+
+    sort(empleados.begin(), empleados.end(), compararSalario);
+
+    cout << "Empleados ordenados por salario (de mayor a menor):" << endl;
+    for (const auto& empleado : empleados) {
+        empleado.mostrar();
+    }
+
+    return 0;
+}
