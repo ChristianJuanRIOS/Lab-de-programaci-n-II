@@ -1,0 +1,39 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+class Persona {
+private:
+    string nombre;
+    int edad;
+
+public:
+    Persona(string n, int e) : nombre(n), edad(e) {}
+
+    int getEdad() const { return edad; }
+    string getNombre() const { return nombre; }
+
+    void mostrar() const {
+        cout << "Nombre: " << nombre << ", Edad: " << edad << endl;
+    }
+};
+
+bool compararEdad(const Persona& p1, const Persona& p2) {
+    return p1.getEdad() < p2.getEdad();
+}
+
+int main() {
+    vector<Persona> personas;
+    personas.push_back(Persona("Juan", 25));
+    personas.push_back(Persona("Maria", 30));
+    personas.push_back(Persona("Pedro", 20));
+
+    sort(personas.begin(), personas.end(), compararEdad);
+
+    for (const auto& persona : personas) {
+        persona.mostrar();
+    }
+
+    return 0;
+}
