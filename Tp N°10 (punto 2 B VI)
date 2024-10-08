@@ -1,0 +1,56 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+class Libro {
+private:
+    string titulo, autor;
+    int anoPublicacion;
+
+public:
+    Libro(string t, string a, int ano) : titulo(t), autor(a), anoPublicacion(ano) {}
+
+    int getAno() const { return anoPublicacion; }
+
+    void mostrar() const {
+        cout << "Título: " << titulo << ", Autor: " << autor << ", Año: " << anoPublicacion << endl;
+    }
+};
+
+bool compararAno(const Libro& l1, const Libro& l2) {
+    return l1.getAno() < l2.getAno();
+}
+
+int main() {
+    vector<Libro> libros;
+    int numLibros;
+
+    cout << "Ingrese el número de libros: ";
+    cin >> numLibros;
+    cin.ignore(); 
+
+    for (int i = 0; i < numLibros; ++i) {
+        string titulo, autor;
+        int anoPublicacion;
+        
+        cout << "Ingrese el título del libro " << (i + 1) << ": ";
+        getline(cin, titulo);
+        cout << "Ingrese el autor del libro " << (i + 1) << ": ";
+        getline(cin, autor);
+        cout << "Ingrese el año de publicación del libro " << (i + 1) << ": ";
+        cin >> anoPublicacion;
+        cin.ignore();  
+        
+        libros.push_back(Libro(titulo, autor, anoPublicacion));
+    }
+
+    sort(libros.begin(), libros.end(), compararAno);
+
+    cout << "Libros ordenados por año de publicación (de más antiguo a más reciente):" << endl;
+    for (const auto& libro : libros) {
+        libro.mostrar();
+    }
+
+    return 0;
+}
