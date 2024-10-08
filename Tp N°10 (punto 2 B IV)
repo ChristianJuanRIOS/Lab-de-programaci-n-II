@@ -1,0 +1,109 @@
+#include <iostream>
+#include <vector>
+#include <limits>
+using namespace std;
+
+class CuentaBancaria {
+private:
+    string numeroCuenta;
+    string nombreTitular;
+    double saldo;
+
+public:
+    CuentaBancaria(string n, string titular, float s)
+        : numeroCuenta(n), nombreTitular(titular), saldo(s) {}
+
+    void mostrar() const {
+        cout << "Número de cuenta: " << numeroCuenta << endl;
+        cout << "Titular: " << nombreTitular << endl;
+        cout << "Saldo: $" << saldo << endl;
+    }
+
+    void depositar(double monto) { saldo += monto; }
+    void retirar(double monto) {
+        if (monto <= saldo) saldo -= monto;
+        else cout << "Saldo insuficiente para retirar $" << monto << endl;
+    }
+
+    string getNumeroCuenta() const { return numeroCuenta; }
+};
+
+int main() {
+    vector<CuentaBancaria> cuentas;
+    int numCuentas;
+
+    cout << "Ingrese el número de cuentas bancarias: ";
+    cin >> numCuentas;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+    for (int i = 0; i < numCuentas; ++i) {
+        string numeroCuenta, nombreTitular;
+        double saldo;
+        
+        cout << "Ingrese el número de cuenta, titular y saldo para la cuenta " << (i + 1) << ": ";
+        getline(cin, numeroCuenta);
+        getline(cin, nombreTitular);
+        cin >> saldo;
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        
+        cuentas.push_back(CuentaBancaria(numeroCuenta, nombreTitular, saldo));
+    }
+
+    cout << "\nDatos de las cuentas bancarias ingresadas:" << endl;
+    for (const auto& cuenta : cuentas) {
+        cuenta.mostrar();
+        cout << "------------------" << endl;
+    }
+
+    string cuentaSeleccionada;
+    cout << "Ingrese el número de cuenta para realizar operaciones: ";
+    getline(cin, cuentaSeleccionada);
+
+    bool cuentaEncontrada = false;
+    for (auto& cuenta : cuentas) {
+        if (cuenta.getNumeroCuenta() == cuentaSeleccionada) {
+            cuentaEncontrada = true;
+            int opcion;
+            do {
+                cout << "Seleccione una operación (1. Depositar, 2. Retirar, 3. Mostrar datos, 4. Salir): ";
+                cin >> opcion;
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+                switch (opcion) {
+                    case 1: {
+                        double montoDeposito;
+                        cout << "Ingrese el monto a depositar: ";
+                        cin >> montoDeposito;
+                        cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
+                        cuenta.depositar(montoDeposito);
+                        break;
+                    }
+                    case 2: {
+                        double montoRetiro;
+                        cout << "Ingrese el monto a retirar: ";
+                        cin >> montoRetiro;
+                        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                        cuenta.retirar(montoRetiro);
+                        break;
+                    }
+                    case 3:
+                        cuenta.mostrar();
+                        break;
+                    case 4:
+                        cout << "Saliendo..." << endl;
+                        break;
+                    default:
+                        cout << "Opción inválida. Inténtelo de nuevo." << endl;
+                        break;
+                }
+            } while (opcion != 4);
+            break;
+        }
+    }
+
+    if (!cuentaEncontrada) {
+        cout << "Número de cuenta no encontrado." << endl;
+    }
+
+    return 0;
+}
