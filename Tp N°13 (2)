@@ -101,3 +101,16 @@ int main() {
    
     return 0;
 }
+
+3) El nombre de la clase padre es Persona.
+
+4) Se hereda de la clase Persona las subclases Empleado y Estudiante
+
+5) La relación es que la clase Tecnico hereda de la clase Estudiante lo cual significa que la
+   clase Tecnico es una subclase de la clase Estudiante.
+
+6) El propósito del constructor de la clase Empleado es inicializar los atributos de la clase padre (Persona) y los de la propia clase Empleado.
+
+7) El propósito del método mostrarPersona() es mostrar los valores de los atributos nombre y edad de la clase Persona.
+
+8) Se utiliza el método 
