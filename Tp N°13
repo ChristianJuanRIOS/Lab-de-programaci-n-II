@@ -13,5 +13,5 @@
 5) Ventajas:
 Reutilización de código: Permite que una clase herede funcionalidades de múltiples clases base, evitando la duplicación de código.
 Flexibilidad: Facilita la creación de jerarquías complejas que pueden modelar relaciones del mundo real de manera más efectiva.
-Problemas potenciales:
+Problemas:
 Ambigüedad: Si varias clases base tienen miembros con el mismo nombre, puede haber confusión sobre a cuál miembro se refiere el compilador .
