@@ -12,7 +12,7 @@ class Persona {
 };
 
 class Empleado : public Persona {
-    private: // Atributos privados de la clase Empleado
+    private: // Atributo privado de la clase Empleado
         float sueldo;
     public: // Métodos públicos de la clase Empleado
         Empleado(string,int,float); // Constructor de Empleado
@@ -20,7 +20,7 @@ class Empleado : public Persona {
 };
 
 class Estudiante : public Persona {
-    private: // Atributos privados de la clase Estudiante
+    private: // Atributo privado de la clase Estudiante
         float notaFinal;
     public: // Métodos públicos de la clase Estudiante
         Estudiante(string,int,float); // Constructor de Estudiante
@@ -28,7 +28,7 @@ class Estudiante : public Persona {
 };
 
 class Tecnico : public Estudiante {
-    private: // Atributos privados de la clase Técnico
+    private: // Atributo privado de la clase Técnico
         string especialidad;
     public:
         Tecnico(string,int,float,string); // Constructor de Técnico
@@ -102,6 +102,10 @@ int main() {
     return 0;
 }
 
+1) El funcionamiento de este código es crear una clase padre (Persona) y de ahi sacar 2 subclases (Empleado y Estudiante) con sus propios
+   atributos y métodos y sacar una subclase (Tecnico) para la subclase Estudiante tambien con sus propios atributos y métodos. Muestran su
+   información mediante un método para cada uno mostrando así la información del empleado del estudiante y del técnico.
+
 3) El nombre de la clase padre es Persona.
 
 4) Se hereda de la clase Persona las subclases Empleado y Estudiante
@@ -113,4 +117,4 @@ int main() {
 
 7) El propósito del método mostrarPersona() es mostrar los valores de los atributos nombre y edad de la clase Persona.
 
-8) Se utiliza el método 
+8) Se utiliza el método mostrarEmpleado() para mostrar el salario.
