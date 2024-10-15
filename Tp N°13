@@ -4,14 +4,14 @@
 2) En el contexto de la herencia, la encapsulación es importante porque permite que las subclases accedan solo a los miembros de la clase padre que son accesibles según el nivel de visibilidad (público, protegido, privado) y asegura que 
    los detalles de implementación de la superclase no se expongan innecesariamente a las subclases o al mundo exterior, promoviendo así una mejor gestión de la complejidad y manteniendo la integridad del objeto.
 
-3) public: Los miembros de la superclase que son públicos son accesibles desde la subclase y desde el exterior.
-   protected: Los miembros de la superclase que son protegidos son accesibles en la subclase, pero no son accesibles desde fuera de la clase.
-   private: Los miembros de la superclase que son privados no son accesibles desde la subclase ni desde fuera de la clase.
+3) public: Los miembros de la clase padre que son públicos son accesibles desde la subclase y desde el exterior.
+   protected: Los miembros de la clase padre que son protegidos son accesibles en la subclase, pero no son accesibles desde fuera de la clase.
+   private: Los miembros de la clase padre que son privados no son accesibles desde la subclase ni desde fuera de la clase.
 
-4) La especialización se refiere al proceso de definir una subclase que añade o modifica comportamientos de la clase base para adaptarse a un caso particular.
+4) La especialización se refiere al proceso de definir una subclase que añade o modifica comportamientos de la clase padre para adaptarse a un caso particular.
 
 5) Ventajas:
-Reutilización de código: Permite que una clase herede funcionalidades de múltiples clases base, evitando la duplicación de código.
+Reutilización de código: Permite que una clase herede funcionalidades de múltiples clases padre, evitando la duplicación de código.
 Flexibilidad: Facilita la creación de jerarquías complejas que pueden modelar relaciones del mundo real de manera más efectiva.
 Problemas:
-Ambigüedad: Si varias clases base tienen miembros con el mismo nombre, puede haber confusión sobre a cuál miembro se refiere el compilador .
+Ambigüedad: Si varias clases padre tienen miembros con el mismo nombre, puede haber confusión sobre a cuál miembro se refiere el compilador.
