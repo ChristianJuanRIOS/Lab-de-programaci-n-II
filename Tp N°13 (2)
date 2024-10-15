@@ -1,0 +1,103 @@
+#include<iostream>
+#include<stdlib.h>
+using namespace std;
+
+class Persona {
+    private: // Atributos privados de la clase Persona
+        string nombre;
+        int edad;
+    public: // Métodos públicos de la clase Persona
+        Persona(string,int); // Constructor de Persona
+        void mostrarPersona(); // Método para mostrar los datos de la Persona
+};
+
+class Empleado : public Persona {
+    private: // Atributos privados de la clase Empleado
+        float sueldo;
+    public: // Métodos públicos de la clase Empleado
+        Empleado(string,int,float); // Constructor de Empleado
+        void mostrarEmpleado(); // Método para mostrar los datos del Empleado
+};
+
+class Estudiante : public Persona {
+    private: // Atributos privados de la clase Estudiante
+        float notaFinal;
+    public: // Métodos públicos de la clase Estudiante
+        Estudiante(string,int,float); // Constructor de Estudiante
+        void mostrarEstudiante(); // Método para mostrar los datos del Estudiante
+};
+
+class Tecnico : public Estudiante {
+    private: // Atributos privados de la clase Técnico
+        string especialidad;
+    public:
+        Tecnico(string,int,float,string); // Constructor de Técnico
+        void mostrarTecnico(); // Método para mostrar los datos del Técnico
+};
+
+// Implementación de métodos
+
+// Constructor de la clase Persona
+Persona::Persona(string _nombre,int _edad) {
+    nombre = _nombre;
+    edad = _edad;
+}
+
+// Método para mostrar los datos de la Persona
+void Persona::mostrarPersona() {
+    cout << "Nombre: " << nombre << endl;
+    cout << "Edad: " << edad << endl;
+}
+
+// Constructor de la clase Empleado llamando al constructor de Persona
+Empleado::Empleado(string _nombre,int _edad,float _sueldo) : Persona(_nombre,_edad) {
+    sueldo = _sueldo;
+}
+
+// Método para mostrar los datos del Empleado
+void Empleado::mostrarEmpleado() {
+    mostrarPersona();
+    cout << "Sueldo: " << sueldo << endl;
+}
+
+// Constructor de la clase Estudiante llamando al constructor de Persona
+Estudiante::Estudiante(string _nombre,int _edad,float _notaFinal) : Persona(_nombre,_edad) {
+    notaFinal = _notaFinal;
+}
+
+// Método para mostrar los datos del Estudiante
+void Estudiante::mostrarEstudiante() {
+    mostrarPersona();
+    cout << "Nota Final: " << notaFinal << endl;
+}
+
+// Constructor de la clase Técnico llamando al constructor de Estudiante
+Tecnico::Tecnico(string _nombre,int _edad,float _notaFinal,string _especialidad) : Estudiante(_nombre,_edad,_notaFinal) {
+    especialidad = _especialidad;
+}
+
+// Método para mostrar los datos del Técnico
+void Tecnico::mostrarTecnico() {
+    mostrarEstudiante();
+    cout << "Especialidad: " << especialidad << endl;
+}
+
+// Función principal
+int main() {
+    Empleado empleado1("Juan",35,1300000);
+    cout << "-Empleado-" << endl;
+    empleado1.mostrarEmpleado();
+    cout << "\n";
+
+    Estudiante estudiante1("Maria",21,16.7);
+    cout << "-Estudiante-" << endl;
+    estudiante1.mostrarEstudiante();
+    cout << "\n";
+   
+    Tecnico tecnico1("Alejandro",20,15.6,"Informatica");
+    cout << "-Tecnico-" << endl;
+    tecnico1.mostrarTecnico();
+    cout << "\n";
+   
+    return 0;
+}
