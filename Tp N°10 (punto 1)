@@ -1,6 +1,6 @@
 Diferencia entre un arreglo y un vector en C++
 
-| Característica             | Arreglo (Array)                               | Vector (std::vector)                                       |
+| Característica             | Arreglo (Array)                               | Vector                                                     |
 |----------------------------|-----------------------------------------------|------------------------------------------------------------|
 | Tamaño                     | Fijo en el momento de la declaración.         | Dinámico, puede crecer o reducirse en tiempo de ejecución. |
 | Asignación de memoria      | Memoria asignada de forma estática o dinámica | Memoria asignada de forma dinámica.                        |
