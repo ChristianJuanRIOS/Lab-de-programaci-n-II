@@ -1,0 +1,4 @@
+I) Sí el código compila exitosamente porque las clases y constructores están bien definidos
+   y El método unMetodo() es público, lo que permite que se llame desde la subclase ClaseDerivada.
+
+II) Se obtiene el valor de la variable unaVar que es unaVar = 50
