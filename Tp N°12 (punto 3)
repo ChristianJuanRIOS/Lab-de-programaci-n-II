@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+
+class Punto {
+private:
+    int x, y; 
+public:
+    Punto() : x(0), y(0) {}
+
+    Punto(int valorX, int valorY) : x(valorX), y(valorY) {}
+
+    void imprimir() {
+        cout << "x: " << x << ", y: " << y << endl;
+    }
+};
+
+int main() {
+    Punto punto1;
+    punto1.imprimir();
+
+    int x, y;
+    cout << "Ingrese el valor de x: ";
+    cin >> x;
+    cout << "Ingrese el valor de y: ";
+    cin >> y;
+    
+    Punto punto2(x, y);
+    punto2.imprimir(); 
+
+    return 0;
+}
