@@ -1,0 +1,54 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Calculadora {
+public:
+    int sumar(int a, int b) { return a + b; }
+    double sumar(double a, double b) { return a + b; }
+
+    int restar(int a, int b) { return a - b; }
+    double restar(double a, double b) { return a - b; }
+    
+    int multiplicar(int a, int b) { return a * b; }
+    double multiplicar(double a, double b) { return a * b; }
+
+    double dividir(double a, double b) { return b != 0 ? a / b : 0; }
+};
+
+class Comparador {
+public:
+    template<typename T>
+    bool comparar(const T& a, const T& b) {
+        return a == b;
+    }
+};
+
+class Conversor {
+public:
+    double metrosACentimetros(double metros) { return metros * 100; }
+    double centimetrosAMetros(double centimetros) { return centimetros / 100; }
+
+    double fahrenheitACelsius(double fahrenheit) { return (fahrenheit - 32) * 5.0 / 9.0; }
+    double celsiusAFahrenheit(double celsius) { return (celsius * 9.0 / 5.0) + 32; }
+};
+
+int main() {
+    // Calculadora
+    Calculadora calc;
+    cout << "Suma(int): " << calc.sumar(5, 3) << endl;
+    cout << "Suma(double): " << calc.sumar(5.5, 3.2) << endl;
+    
+    // Comparador
+    Comparador comp;
+    cout << "Comparar 5 y 5: " << (comp.comparar(5, 5) ? "Iguales" : "Distintos") << endl;
+
+    // Conversor
+    Conversor conv;
+    cout << "10 metros = " << conv.metrosACentimetros(10) << " cm" << endl;
+    cout << "100 centímetros = " << conv.centimetrosAMetros(100) << " m" << endl;
+    cout << "32°F = " << conv.fahrenheitACelsius(32) << "°C" << endl;
+    cout << "0°C = " << conv.celsiusAFahrenheit(0) << "°F" << endl;
+
+    return 0;
+}
