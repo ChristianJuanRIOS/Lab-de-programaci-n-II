@@ -1,0 +1,67 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class Empleado {
+public:
+    string nombre;
+    double salario;
+    string departamento;
+
+    Empleado(string n, double s, string d) : nombre(n), salario(s), departamento(d) {}
+};
+
+class Empresa {
+private:
+    vector<Empleado> empleados;
+
+public:
+    void agregarEmpleado(const Empleado& empleado) {
+        empleados.push_back(empleado);
+    }
+
+    double calcularNominaTotal() {
+        double total = 0;
+        for (const auto& empleado : empleados) {
+            total += empleado.salario;
+        }
+        return total;
+    }
+
+    Empleado* empleadoMayorSalario() {
+        if (empleados.empty()) return nullptr;
+        Empleado* mayor = &empleados[0];
+        for (auto& empleado : empleados) {
+            if (empleado.salario > mayor->salario) {
+                mayor = &empleado;
+            }
+        }
+        return mayor;
+    }
+
+    void listarEmpleadosPorDepartamento(const std::string& departamento) {
+        cout << "Empleados en el departamento " << departamento << ":" << endl;
+        for (const auto& empleado : empleados) {
+            if (empleado.departamento == departamento) {
+                cout << "- " << empleado.nombre << " (Salario: " << empleado.salario << ")" << endl;
+            }
+        }
+    }
+};
+
+int main() {
+    Empresa empresa;
+    empresa.agregarEmpleado(Empleado("Juan", 3000, "Ventas"));
+    empresa.agregarEmpleado(Empleado("María", 4000, "IT"));
+    empresa.agregarEmpleado(Empleado("Pedro", 3500, "Ventas"));
+
+    cout << "Nómina total: " << empresa.calcularNominaTotal() << std::endl;
+
+    Empleado* mayorSalario = empresa.empleadoMayorSalario();
+    if (mayorSalario) {
+        cout << "Empleado con mayor salario: " << mayorSalario->nombre << " (Salario: " << mayorSalario->salario << ")" << endl;
+    }
+
+    empresa.listarEmpleadosPorDepartamento("Ventas");
+
+    return 0;
+}
