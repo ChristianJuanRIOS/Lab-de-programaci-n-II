@@ -1,0 +1,60 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class Mesa {
+public:
+    int numero;
+    int comensales;
+    bool ocupada;
+
+    Mesa(int n, int c) : numero(n), comensales(c), ocupada(false) {}
+};
+
+class Restaurante {
+private:
+    vector<Mesa> mesas;
+
+public:
+    Restaurante(int numMesas) {
+        for (int i = 1; i <= numMesas; ++i) {
+            mesas.emplace_back(i, 4);
+        }
+    }
+
+    void reservarMesa(int numero) {
+        for (auto& mesa : mesas) {
+            if (mesa.numero == numero && !mesa.ocupada) {
+                mesa.ocupada = true;
+                break;
+            }
+        }
+    }
+
+    void liberarMesa(int numero) {
+        for (auto& mesa : mesas) {
+            if (mesa.numero == numero) {
+                mesa.ocupada = false;
+                break;
+            }
+        }
+    }
+
+    int mesasLibres() {
+        int libres = 0;
+        for (const auto& mesa : mesas) {
+            if (!mesa.ocupada) {
+                libres++;
+            }
+        }
+        return libres;
+    }
+};
+
+int main() {
+    Restaurante restaurante(10);
+    restaurante.reservarMesa(1);
+    cout << "Mesas libres: " << restaurante.mesasLibres() << endl;
+    restaurante.liberarMesa(1);
+    cout << "Mesas libres: " << restaurante.mesasLibres() << endl;
+    return 0;
+}
