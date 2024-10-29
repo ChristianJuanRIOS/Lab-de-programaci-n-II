@@ -1,0 +1,65 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class Libro {
+public:
+    string titulo;
+    string autor;
+    int paginas;
+
+    Libro(string t, string a, int p) : titulo(t), autor(a), paginas(p) {}
+};
+
+class Biblioteca {
+private:
+    vector<Libro> libros;
+
+public:
+    void agregarLibro(const Libro& libro) {
+        libros.push_back(libro);
+    }
+
+    void eliminarLibro(const string& titulo) {
+        for (auto it = libros.begin(); it != libros.end(); ++it) {
+            if (it->titulo == titulo) {
+                libros.erase(it);
+                return;
+            }
+        }
+    }
+
+    Libro* buscarLibro(const string& titulo) {
+        for (auto& libro : libros) {
+            if (libro.titulo == titulo) {
+                return &libro;
+            }
+        }
+        return nullptr;
+    }
+
+    int totalPaginas() {
+        int total = 0;
+        for (const auto& libro : libros) {
+            total += libro.paginas;
+        }
+        return total;
+    }
+};
+
+int main() {
+    Biblioteca biblioteca;
+    biblioteca.agregarLibro(Libro("Cien años de soledad", "Gabriel García Márquez", 417));
+    biblioteca.agregarLibro(Libro("1984", "George Orwell", 330));
+    
+    cout << "Total de páginas: " << biblioteca.totalPaginas() << endl;
+
+    Libro* libro = biblioteca.buscarLibro("1984");
+    if (libro) {
+        cout << "Encontrado: " << libro->titulo << " por " << libro->autor << endl;
+    }
+
+    biblioteca.eliminarLibro("Cien años de soledad");
+    cout << "Total de páginas después de eliminar: " << biblioteca.totalPaginas() << endl;
+
+    return 0;
+}
