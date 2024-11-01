@@ -1,125 +1,132 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Presentación Personal</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Presentación Personal</title>
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+     <style>
+         html {
+             scroll-behavior: smooth;
+            }
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 2px 2px 10px 10px rgba(0, 0, 0, 0.15);
-        }
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-            margin: 20px 0;
-        }
-        strong {
-            color: #e74c3c;
-        }
+         body {
+             font-family: Arial, sans-serif;
+             background-color: #f4f4f4;
+             color: #333;
+             margin: 0;
+             padding: 0;
+             display: flex;
+             flex-direction: column;
+            }
 
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100px;
-            background-color: #e74c3c;
-            padding-top: 20px;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.6);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        nav a {
-            display: block;
-            color: #fff;
-            font-weight: bold;
-            font-size: 15px;
-            margin: 15px 0;
-            text-align: center;
-            transition: background-color 0.3s, color 0.3s;
-            text-decoration: none;
-            padding: 10px;
-            width: 80%;
-            border-radius: 8px;
-        }
-        nav a:hover {
-            background-color: #333;
-            color: #fff;
-        }
+         h1 {
+             text-align: center;
+             color: #333;
+             margin-top: 20px;
+             padding: 20px;
+             background-color: #fff;
+             border-radius: 10px;
+             box-shadow: 2px 2px 10px 10px rgba(0, 0, 0, 0.15);
+            }
+        
+            p {
+             font-size: 18px;
+             line-height: 1.6;
+             margin: 20px 0;
+            }
 
-        .content {
-            margin-left: 120px; 
-            padding: 40px;
-        }
+            strong {
+             color: #e74c3c;
+            }
 
-        footer {
-            background-color: #e74c3c;
-            color: #fff;
-            text-align: center;
-            padding: 15px 0;
-            width: 100%;
-            position: relative;
-        }
-        footer .social {
-            margin: 5px 0;
-        }
-        footer a {
-            color: #fff;
-            margin: 0 8px;
-            transition: color 0.3s;
-            font-size: 18px;
-            text-decoration: none;
-        }
-    </style>
-</head>
-<body>
-    <nav>
-        <a href="#edad">Edad</a>
-        <a href="#color">Color Favorito</a>
-        <a href="#comida">Comida Favorita</a>
-        <a href="#me-gusta">Me Gusta</a>
-        <a href="#mascotas">Mascotas</a>
-        <a href="#no-me-gusta">No Me Gusta</a>
-    </nav>
+            nav {
+             position: fixed;
+             top: 0;
+             left: 0;
+             height: 100%;
+             width: 100px;
+             background-color: #e74c3c;
+             padding-top: 20px;
+             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.6);
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+            }
 
-    <div class="content">
-        <h1>Hola, soy Christian Rios</h1>
-        <h2 id="edad"><strong>Edad y algunos datos sobre mí:</h2></strong><p> Tengo 18 años, nací en el año 2006, mi cumpleaños es el 24 de agosto. Repetí dos veces, una porque no tenía la suficiente edad para entrar a la escuela y la otra por no haberme unido a ninguna clase virtual. Tengo 1 hermano y 3 hermanas (una menor y las otras dos mayores).</p>
-        <h2 id="color"><strong>Color favorito:</h2></strong><p> Cian.</p>
-        <h2 id="comida"><strong>Comida favorita:</strong> Ranga.</p>
-        <p id="me-gusta"><strong>Me gusta <i class="fa fa-check"></i>:</strong> Las matemáticas, los videojuegos, la música, dormir (apenas llego a dormir 4 o 5 horas <i class="fas fa-dizzy"></i>), y dibujar (aunque cuando me pongo a dibujar algo, termino luego de 2 horas o más, y ya se me van las ganas de dibujar).</p>
-        <p id="mascotas"><strong>Mascotas:</strong> Tengo 1 perro, 5 gatos, 10 gallinas y 13 gansos (3 acaban de nacer hace un mes).</p>
-        <p id="no-me-gusta"><strong>No me gusta <i class="fa fa-times" aria-hidden="true"></i>:</strong> Artística, ir a trabajar, el guiso, sacarme fotos, hacer tarea en casa y que mis padres me reclamen por estar con el celular cuando ya hice toda mi tarea, ordené mi cama, di alimento a las gallinas y, a veces, hasta luego de volver de trabajar.</p>
-    </div>
+            nav a {
+             display: block;
+             color: #fff;
+             font-weight: bold;
+             font-size: 15px;
+             margin: 15px 0;
+             text-align: center;
+             transition: background-color 0.3s, color 0.3s;
+             text-decoration: none;
+             padding: 10px;
+             width: 80%;
+             border-radius: 8px;
+            }
 
-    <footer>
-        <div class="social">
-            <b>Contáctame:</b><br>
-            <div><a href="https://www.facebook.com/Chris_0824" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></div>
-            <div><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></div>
-            <div><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></div>
-        </div>
-    </footer>
-</body>
+            nav a:hover {
+             background-color: #333;
+             color: #fff;
+            }
+
+            .content {
+             margin-left: 120px; 
+             padding: 40px;
+            }
+
+            footer {
+             background-color: #e74c3c;
+             color: #fff;
+             text-align: center;
+             padding: 15px 0;
+             width: 100%;
+             position: relative;
+            }
+
+            footer .social {
+             margin: 5px 0;
+            }
+
+            footer a {
+             color: #fff;
+             margin: 0 8px;
+             transition: color 0.3s;
+             font-size: 18px;
+             text-decoration: none;
+            }
+     </style>
+ </head>
+ <body>
+     <nav>
+         <a href="#edad">Edad</a>
+         <a href="#color">Color Favorito</a>
+         <a href="#comida">Comida Favorita</a>
+         <a href="#me-gusta">Me Gusta</a>
+         <a href="#mascotas">Mascotas</a>
+         <a href="#no-me-gusta">No Me Gusta</a>
+      </nav>
+
+      <div class="content">
+         <h1>Hola, soy Christian Rios</h1>
+         <h2 id="edad"><strong>Edad y algunos datos sobre mí:</h2></strong><p> Tengo 18 años, nací en el año 2006, mi cumpleaños es el 24 de agosto. Repetí dos veces, una porque no tenía la suficiente edad para entrar a la escuela y la otra por no haberme unido a ninguna clase virtual. Tengo 1 hermano y 3 hermanas (una menor y las otras dos mayores).</p>
+         <h2 id="color"><strong>Color favorito:</h2></strong><p> Cian.</p>
+         <h2 id="comida"><strong>Comida favorita:</h2></strong><p> Ranga.</p>
+         <h2 id="me-gusta"><strong>Me gusta <i class="fa fa-check"></i>:</h2></strong><p> Las matemáticas, los videojuegos, la música, dormir (apenas llego a dormir 4 o 5 horas <i class="fas fa-dizzy"></i>), y dibujar (aunque cuando me pongo a dibujar algo, termino luego de 2 horas o más, y ya se me van las ganas de dibujar).</p>
+         <h2 id="mascotas"><strong>Mascotas:</h2></strong></p> Tengo 1 perro, 5 gatos, 10 gallinas y 13 gansos (3 acaban de nacer hace un mes).</p>
+         <h2 id="no-me-gusta"><strong>No me gusta <i class="fa fa-times" aria-hidden="true"></i>:</h2></strong><p> Artística, ir a trabajar (al campo), el guiso, sacarme fotos, hacer tarea en casa y que mis padres me reclamen por estar con el celular cuando ya hice toda mi tarea, ordené mi cama, di alimento a las gallinas y, a veces, hasta luego de volver de trabajar.</p>
+      </div>
+
+      <footer>
+         <div class="social">
+             <b>Contáctame:</b><br>
+             <div><a href="https://www.facebook.com/Chris_0824" target="_blank"><i class="fab fa-facebook fa-spin"></i> Facebook</a></div>
+             <div><a href="https://twitter.com/asdfghjklñ_184523213" target="_blank"><i class="fa-brands fa-x-twitter fa-beat"></i> Twitter</a></div>
+             <div><a href="https://www.instagram.com/qwerty_80126543" target="_blank"><i class="fab fa-instagram fa-flip"></i> Instagram</a></div> 
+         </div>
+      </footer>
+ </body>
 </html>
