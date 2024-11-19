@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+class InstrumentoMusical {
+public:
+    virtual void tocar() = 0;
+};
+
+class Piano : public InstrumentoMusical {
+public:
+    void tocar() override {
+        cout << "El piano toca melodías suaves y armoniosas" << endl;
+    }
+};
+
+class Guitarra : public InstrumentoMusical {
+public:
+    void tocar() override {
+        cout << "La guitarra produce acordes y arpegios vibrantes" << endl;
+    }
+};
+
+class Flauta : public InstrumentoMusical {
+public:
+    void tocar() override {
+        cout << "La flauta emite sonidos melódicos y tranquilos" << endl;
+    }
+};
+
+int main() {
+    InstrumentoMusical* i1 = new Piano();
+    InstrumentoMusical* i2 = new Guitarra();
+    InstrumentoMusical* i3 = new Flauta();
+
+    i1->tocar();
+    i2->tocar();
+    i3->tocar();
+
+    delete i1;
+    delete i2;
+    delete i3;
+    return 0;
+}
