@@ -26,4 +26,16 @@ Mayor complejidad de diseño y mantenimiento.
 
 6) Sí, una clase base puede tener funciones virtuales.
 
-7) 
+7) Es una función virtual que no tiene implementación en la clase base y se declara asignándole = 0. Obliga a las clases derivadas a implementarla.
+sintaxis:
+class Base {
+public:
+    virtual void funcion() = 0; // Función virtual pura
+};
+
+8) Mediante el uso de punteros o referencias a la clase base para llamar a funciones virtuales. El tipo del objeto apuntado determina la implementación específica que se ejecutará.
+
+9) Son clases que contienen al menos una función virtual pura. No se pueden instanciar y están diseñadas para servir como base para otras clases.
+
+10) Se debe utilizar cuando se redefine una función virtual en una clase derivada para asegurarse de que está sobrescribiendo correctamente una función en la clase base.
+   Si no hay coincidencia exacta, el compilador generará un error.
