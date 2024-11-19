@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+class Vehiculo {
+public:
+    virtual void acelerar() = 0;
+};
+
+class Coche : public Vehiculo {
+public:
+    void acelerar() override {
+        cout << "El coche acelera a 100 km/h en 10 segundos" << endl;
+    }
+};
+
+class Moto : public Vehiculo {
+public:
+    void acelerar() override {
+        cout << "La moto acelera a 100 km/h en 5 segundos" << endl;
+    }
+};
+
+int main() {
+    Vehiculo* v1 = new Coche();
+    Vehiculo* v2 = new Moto();
+
+    v1->acelerar();
+    v2->acelerar();
+
+    delete v1;
+    delete v2;
+    return 0;
+}
