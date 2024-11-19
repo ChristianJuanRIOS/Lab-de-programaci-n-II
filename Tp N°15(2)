@@ -1,0 +1,40 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+class Figura {
+public:
+    virtual double calcularArea() = 0;
+};
+
+class Rectangulo : public Figura {
+private:
+    double largo, ancho;
+public:
+    Rectangulo(double l, double a) : largo(l), ancho(a) {}
+    double calcularArea() override {
+        return largo * ancho;
+    }
+};
+
+class Circulo : public Figura {
+private:
+    double radio;
+public:
+    Circulo(double r) : radio(r) {}
+    double calcularArea() override {
+        return M_PI * radio * radio;
+    }
+};
+
+int main() {
+    Figura* f1 = new Rectangulo(5.0, 3.0);
+    Figura* f2 = new Circulo(4.0);
+
+    cout << "Área del Rectángulo: " << f1->calcularArea() << endl;
+    cout << "Área del Círculo: " << f2->calcularArea() << endl;
+
+    delete f1;
+    delete f2;
+    return 0;
+}
