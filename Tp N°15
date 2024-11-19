@@ -1,0 +1,29 @@
+1) Una función virtual en C++ es una función miembro que se declara con la palabra clave virtual en una clase base y puede ser redefinida en las clases derivadas
+
+2)Una función normal no permite polimorfismo en tiempo de ejecución: se llama a la función correspondiente al tipo del puntero, no al tipo real del objeto mientras que
+una función virtual permite el polimorfismo en tiempo de ejecución, y la llamada a la función depende del tipo del objeto apuntado.
+
+3) Se declara anteponiendo la palabra clave virtual a la función en la clase base.
+sintaxis:
+class Base {
+public:
+    virtual void funcion() {
+        // Implementacion
+    }
+};
+
+4) Es un principio de la programación orientada a objetos que permite manejar objetos de diferentes clases derivadas de una clase base de manera uniforme. En C++, se 
+  logra a través de funciones virtuales y la herencia.
+
+5)
+Ventajas:
+Flexibilidad: permite usar una interfaz común para diferentes implementaciones.
+Escalabilidad: facilita la adición de nuevas clases sin modificar el código existente.
+
+Desventajas:
+Sobrecarga de rendimiento debido a la resolución dinámica en tiempo de ejecución.
+Mayor complejidad de diseño y mantenimiento.
+
+6) Sí, una clase base puede tener funciones virtuales.
+
+7) 
