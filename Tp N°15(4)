@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+class Empleado {
+public:
+    virtual double calcularSalario() = 0; // Función virtual pura
+};
+
+class Gerente : public Empleado {
+private:
+    double salarioBase;
+public:
+    Gerente(double base) : salarioBase(base) {}
+    double calcularSalario() override {
+        return salarioBase + 5000; // Bonus fijo
+    }
+};
+
+class Vendedor : public Empleado {
+private:
+    double salarioBase, comision, ventas;
+public:
+    Vendedor(double base, double com, double ven) : salarioBase(base), comision(com), ventas(ven) {}
+    double calcularSalario() override {
+        return salarioBase + (comision * ventas);
+    }
+};
+
+int main() {
+    Empleado* e1 = new Gerente(20000);
+    Empleado* e2 = new Vendedor(15000, 0.05, 300000);
+
+    cout << "Salario del Gerente: " << e1->calcularSalario() << endl;
+    cout << "Salario del Vendedor: " << e2->calcularSalario() << endl;
+
+    delete e1;
+    delete e2;
+    return 0;
+}
