@@ -1,0 +1,33 @@
+1) Una función virtual es una función declarada en una clase base que se puede sobrescribir en las clases derivadas. Permite que, al usar un puntero o referencia a la clase base, se ejecute la versión de la función correspondiente al tipo del objeto derivado apuntado.
+
+2) Función virtual: Se sobrescribe en clases derivadas manteniendo la misma firma que en la clase base.
+   Sobrecarga: Se define más de una función con el mismo nombre pero con diferentes firmas dentro de la misma clase. No implica polimorfismo ni herencia​.
+
+3) Se declara anteponiendo la palabra clave virtual al prototipo de la función en la clase base.
+Por ejemplo:
+class Base {
+public:
+    virtual void funcionVirtual();
+};
+
+4) Es la capacidad de usar un mismo nombre de función para realizar diferentes tareas, dependiendo del tipo del objeto.
+
+5) Ventajas:
+      Facilita el diseño extensible y flexible de software.
+      Promueve el uso de interfaces comunes para manejar clases derivadas.
+      Reduce la duplicación de código.
+Desventajas:
+      Puede agregar sobrecarga en tiempo de ejecución.
+      Incrementa la complejidad de depuración y diseño.
+      Es menos eficiente en comparación con funciones no virtuales debido al uso de tablas virtuales (vtable)​
+
+6) Sí, se puede. La clase base puede declarar funciones virtuales que luego serán sobrescritas por clases derivadas. Esto permite que una función tenga comportamientos distintos dependiendo del tipo del objeto en tiempo de ejecución​.
+
+7) Una función virtual pura no tiene implementación en la clase base y debe ser redefinida por las clases derivadas. Se declara utilizando = 0 al final de la declaración:
+   virtual void funcionVirtualPura() = 0;
+
+8) Se logra declarando un puntero o referencia a la clase base y asignándole un objeto de una clase derivada. Esto permite llamar funciones virtuales específicas del tipo del objeto apuntado, gracias a la tabla virtual (vtable)
+
+9) Son clases que contienen al menos una función virtual pura y no pueden ser instanciadas directamente. Su propósito es actuar como base para otras clases que implementen las funciones virtuales puras​
+
+10) Se usa cuando una función virtual de la clase base es sobrescrita en una clase derivada para garantizar que realmente esté sobrescribiendo una función existente. Si no existe una función virtual en la clase base con la misma firma, el compilador genera un error. Esto mejora la claridad y evita errores de sobrescritura accidental​
